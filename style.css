@@ -1,0 +1,77 @@
+body {
+    padding-top: 10px;
+    width: 100%;
+    align-items: center;
+
+  }
+
+header {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.subheading {
+  text-align: center;
+  color: orange;
+  font-family: 'Copperplate';
+  font-size: medium;
+}
+
+.subheading2 {
+  text-align: center;
+  color: black;
+  font-style: italic;
+  font-family: 'Copperplate';
+  font-size: medium;
+}
+
+.logo {
+  text-align: center;
+  max-width: 60%;
+  max-height: 100vh;
+  height: auto;
+}
+
+.pic {
+  object-fit:contain;
+  width: 150px;
+  height: 175px;
+}
+
+.name {
+  padding-top: 5px;
+  text-align: start;
+  font-family: 'Copperplate';
+}
+
+.price {
+  padding-top: 5px;
+  text-align: end;
+  font-family: 'Copperplate';
+
+}
+.but{
+  padding-left: 0%;
+  padding-top: 10px;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.order {
+  text-align: left;
+}
+
+.btn {
+  background-color: #86aacc;
+  border-color: rgb(85, 94, 173);
+  padding: 7px;
+  color: white;
+  text-align: center;
+  font-family: 'Copperplate';
+  font-size: 12px;
+  border-radius: 20px;
+  --bs-btn-hover-border-color: rgb(74, 74, 119);
+}
