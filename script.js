@@ -1,20 +1,69 @@
-var orderbt = document.getElementById("order-items");
-var macInc = document.getElementById("mac-inc");
+//declare variables
+let subtotal = 0;
+let cart = new Map();
 
-//increment event listeners
-macInc.addEventListener("click", incQty);
-orderbt.addEventListener("click", orderAlert);
-
-function incQty(){
+//changes the quantity of an item based on what is clicked
+function changeQty(val, item){
     //alert("changing quantity");
-    var num = document.getElementById("qty-mac").textContent;
-    //alert(num);
-    document.getElementById("qty-mac").innerHTML = parseInt(num,10) + 1;
-    //qty = qty + 1;
+
+    let num = document.getElementById(item).textContent;
+    let key = item.substring(0,3);
+    let name = document.getElementById(key).textContent;
+
+
+    //increment or decrement quantity based on buttons. update cart and subtotal 
+    if(val === '+'){
+        document.getElementById(item).innerHTML = parseInt(num,10) + 1;
+
+        //add item to cart
+        if(!cart.has(name)){
+            //alert("cart empty");
+            cart.set(name, 1);
+        } else{
+            let qty = cart.get(name) + 1;
+            cart.set(name, qty);
+        }
+
+        subtotal += parseInt(document.getElementById(key + "-price").textContent.substring(1), 10);
+        
+    }
+    else if (val == '-' && num > 0){
+        document.getElementById(item).innerHTML = parseInt(num,10) - 1;
+
+        if(cart.get(name) === 1){
+            //alert("cart empty");
+            cart.delete(name)
+        } else{
+            let qty = cart.get(name) - 1;
+            cart.set(name, qty);
+        }
+
+        subtotal -= parseInt(document.getElementById(key + "-price").textContent.substring(1), 10);
+    }
+
+    document.getElementById("subtotal").innerHTML = "$" + subtotal;
 }
 
+//place an order
 function orderAlert(){
     //just testing to see if it works for now
-    alert("Order Placed!")
+    let items = ""
+    for(let [key, value] of cart){
+        items += value + " " + key + "\n"
+    }
+    alert("Order Placed!\n" + items);
 }
-//alert('hello world');
+
+//reset values, subtotal, and cart
+function reset(){
+    subtotal = 0;
+
+    //go through each item added in cart and set to 0
+    for(let [key] of cart){
+        let name = key.substring(0,3).toLowerCase();
+        document.getElementById(name + "-qty").innerHTML = 0;
+    }
+    
+    cart.clear();
+    document.getElementById("subtotal").innerHTML = "$" + subtotal;
+}

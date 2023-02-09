@@ -28,15 +28,15 @@
           <img src="pics/macs.jpeg" class="pic" alt="Mac & Cheese">
         </div>
         <div class="col">
-          <div class="row name">Mac & Cheese</div>
+          <div id="mac" class="row name">Mac & Cheese</div>
         </div>
         <div class="col">
-          <div class="price">$5</div>
+          <div id="mac-price" class="price">$5</div>
           <div class="row order">
             <div class="num">
-             <button id="mac-dec" class="qtybtn">-</button>
-             <div id="qty-mac" class="qty">0</div>
-             <button id="mac-inc" class="qtybtn">+</button>
+             <button id="mac-dec" onclick="changeQty('-', 'mac-qty')" class="qtybtn">-</button>
+             <div id="mac-qty" class="qty">0</div>
+             <button id="mac-inc" onclick="changeQty('+', 'mac-qty')" class="qtybtn">+</button>
             </div>
 
           </div>
@@ -50,15 +50,15 @@
           <img src="pics/pas.jpeg" class="pic" alt="Pasta">
         </div>
         <div class="col">
-          <div class="row name">Pasta</div>
+          <div id="pas" class="row name">Pasta</div>
         </div>
         <div class="col">
-          <div class="price">$8</div>
+          <div id="pas-price" class="price">$8</div>
           <div class="row order">
             <div class="num">
-             <button id="pas-dec" class="qtybtn">-</button>
-             <div id="qty-pasta" class="qty">0</div>
-             <button id="pas-inc" class="qtybtn">+</button>
+             <button id="pas-dec" onclick="changeQty('-', 'pas-qty')" class="qtybtn">-</button>
+             <div id="pas-qty" class="qty">0</div>
+             <button id="pas-inc" onclick="changeQty('+', 'pas-qty')" class="qtybtn">+</button>
             </div>
 
           </div>
@@ -72,15 +72,15 @@
           <img src="pics/tacos.jpeg" class="pic" alt="Tacos">
         </div>
         <div class="col">
-          <div class="row name">Tacos</div>
+          <div id="tac" class="row name">Tacos</div>
         </div>
         <div class="col">
-          <div class="price">$8</div>
+          <div id="tac-price" class="price">$8</div>
           <div class="row order">
             <div class="num">
-             <button id="tac-dec" class="qtybtn">-</button>
-             <div id="qty-tacos" class="qty">0</div>
-             <button id="tac-inc" class="qtybtn">+</button>
+             <button id="tac-dec" onclick="changeQty('-', 'tac-qty')" class="qtybtn">-</button>
+             <div id="tac-qty" class="qty">0</div>
+             <button id="tac-inc" onclick="changeQty('+', 'tac-qty')" class="qtybtn">+</button>
             </div>
 
           </div>
@@ -94,15 +94,15 @@
           <img src="pics/enchilada.jpeg" class="pic" alt="Enchilada">
         </div>
         <div class="col">
-          <div class="row name">Enchilada</div>
+          <div id="enc" class="row name">Enchilada</div>
         </div>
         <div class="col">
-          <div class="price">$10</div>
+          <div id="enc-price" class="price">$10</div>
           <div class="row order">
             <div class="num">
-             <button id="enc-dec" class="qtybtn">-</button>
-             <div id="qty-enchilada" class="qty">0</div>
-             <button id="enc-inc" class="qtybtn">+</button>
+             <button id="enc-dec" onclick="changeQty('-', 'enc-qty')" class="qtybtn">-</button>
+             <div id="enc-qty" class="qty">0</div>
+             <button id="enc-inc"  onclick="changeQty('+', 'enc-qty')" class="qtybtn">+</button>
             </div>
 
           </div>
@@ -123,10 +123,10 @@
           </div>
         </div>
         <div class="col-3 ordering">
-          <button id="order-items"class="orderbt">Order</button>
+          <button id="order-items" onclick="orderAlert()"class="orderbt">Order</button>
         </div>
         <div class="col-4 clear">
-          <button class="clearbt">Clear All</button>
+          <button id="clear-all" onclick="reset()" class="clearbt">Clear All</button>
         </div>
       </div>
     </div>
