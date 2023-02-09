@@ -72,19 +72,6 @@ div.container.text-container.main{
   display: table;
 }
 
-
-.btn {
-  background-color: #86aacc;
-  border-color: rgb(85, 94, 173);
-  padding: 7px;
-  color: white;
-  text-align: center;
-  font-family: 'Copperplate';
-  font-size: 12px;
-  border-radius: 20px;
-  --bs-btn-hover-border-color: rgb(74, 74, 119);
-}
-
 div.row.order{
   white-space: nowrap;
 }
@@ -140,15 +127,22 @@ div.row.order{
 .orderbt{
   font-size: small;
   background-color: #abcdee;
+  border-color: rgb(77, 86, 165);
+  box-shadow: none;
   border-radius: 20px;
   width: 100%;
+  border-width: 2px;
 }
 
 .clearbt{
   font-size: small;
   border-radius: 20px;
   background-color: #b9bec4;
+  color:black;
+  border-color: rgb(45, 46, 54);
+  box-shadow: none;
   width:100%;
+  border-width: 2px;
 }
 
 
