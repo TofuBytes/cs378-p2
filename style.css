@@ -42,27 +42,32 @@ header {
   padding-top: 5px;
   text-align: start;
   font-family: 'Copperplate';
+  font-size: medium;
 }
 
 .price {
+  height: 75%;
   padding-top: 5px;
   text-align: end;
   font-family: 'Copperplate';
 
 }
+
+.end{
+  flex-direction: row-reverse;
+}
+
 .but{
   padding-left: 0%;
   padding-top: 10px;
 }
+
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
 }
 
-.order {
-  text-align: left;
-}
 
 .btn {
   background-color: #86aacc;
@@ -75,3 +80,36 @@ header {
   border-radius: 20px;
   --bs-btn-hover-border-color: rgb(74, 74, 119);
 }
+
+div.row.order{
+  white-space: nowrap;
+}
+
+.qty{
+  font-family: 'Copperplate';
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+
+.num{
+  display: inline-flex;
+  justify-content: right;
+}
+
+.qtybtn{
+  font-family: 'Copperplate';
+  background-color: white;
+  border-color: rgb(0, 0, 0);
+  text-align: center;
+  display: inline-flex;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
