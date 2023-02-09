@@ -45,13 +45,22 @@ function changeQty(val, item){
 }
 
 //place an order
-function orderAlert(){
-    //just testing to see if it works for now
-    let items = ""
-    for(let [key, value] of cart){
-        items += value + " " + key + "\n"
+function placeOrder(){
+    
+    let items = "Order Placed!\n";
+
+    //check if cart is empty
+    if(cart.size == 0){
+        items = "There are no items in your cart.";
+    }else {
+
+        //get qty and items in cart
+        for(let [key, value] of cart){
+            items += value + " " + key + "\n";
+        }
     }
-    alert("Order Placed!\n" + items);
+
+    alert(items);
 }
 
 //reset values, subtotal, and cart
