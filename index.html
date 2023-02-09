@@ -34,9 +34,9 @@
           <div class="price">$5</div>
           <div class="row order">
             <div class="num">
-             <button class="qtybtn">-</button>
-             <div class="qty">0</div>
-             <button class="qtybtn">+</button>
+             <button id="mac-dec" class="qtybtn">-</button>
+             <div id="qty-mac" class="qty">0</div>
+             <button id="mac-inc" class="qtybtn">+</button>
             </div>
 
           </div>
@@ -56,9 +56,9 @@
           <div class="price">$8</div>
           <div class="row order">
             <div class="num">
-             <button class="qtybtn">-</button>
-             <div class="qty">0</div>
-             <button class="qtybtn">+</button>
+             <button id="pas-dec" class="qtybtn">-</button>
+             <div id="qty-pasta" class="qty">0</div>
+             <button id="pas-inc" class="qtybtn">+</button>
             </div>
 
           </div>
@@ -78,9 +78,9 @@
           <div class="price">$8</div>
           <div class="row order">
             <div class="num">
-             <button class="qtybtn">-</button>
-             <div class="qty">0</div>
-             <button class="qtybtn">+</button>
+             <button id="tac-dec" class="qtybtn">-</button>
+             <div id="qty-tacos" class="qty">0</div>
+             <button id="tac-inc" class="qtybtn">+</button>
             </div>
 
           </div>
@@ -100,9 +100,9 @@
           <div class="price">$10</div>
           <div class="row order">
             <div class="num">
-             <button class="qtybtn">-</button>
-             <div class="qty">0</div>
-             <button class="qtybtn">+</button>
+             <button id="enc-dec" class="qtybtn">-</button>
+             <div id="qty-enchilada" class="qty">0</div>
+             <button id="enc-inc" class="qtybtn">+</button>
             </div>
 
           </div>
@@ -116,7 +116,12 @@
 
     <div class="container text-container cart">
       <div class="row checkout">
-        <div class="col-5 total">Subtotal $0</div>
+        <div class="col-5 total">
+          <div class="row">
+            <div class="col">Subtotal</div>
+            <div id="subtotal" class="col">$0</div>
+          </div>
+        </div>
         <div class="col-3 ordering">
           <button class="orderbt">Order</button>
         </div>
