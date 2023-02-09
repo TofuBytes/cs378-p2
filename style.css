@@ -10,6 +10,10 @@ header {
   text-align: center;
 }
 
+div.container.text-container.main{
+  padding-bottom: 80px;
+}
+
 .subheading {
   text-align: center;
   color: orange;
@@ -34,12 +38,12 @@ header {
 
 .pic {
   object-fit:contain;
-  width: 150px;
-  height: 175px;
+  width: 125px;
+  height: 150px;
 }
 
 .name {
-  padding-top: 5px;
+  padding-top: 10px;
   text-align: start;
   font-family: 'Copperplate';
   font-size: medium;
@@ -47,7 +51,7 @@ header {
 
 .price {
   height: 75%;
-  padding-top: 5px;
+  padding-top: 10px;
   text-align: end;
   font-family: 'Copperplate';
 
@@ -108,8 +112,43 @@ div.row.order{
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+  font-size: medium;
 }
 
+.cart {
+  vertical-align: middle;
+  padding-top: 20px;
+  background:white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10%;
+}    
 
+.checkout{
+  margin: auto;
+  height:100%;
+  text-align: left;
+  font-family: 'Copperplate';
+}
+
+.ordering{
+  text-align: right;
+}
+
+.orderbt{
+  font-size: small;
+  background-color: #abcdee;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.clearbt{
+  font-size: small;
+  border-radius: 20px;
+  background-color: #b9bec4;
+  width:100%;
+}
 
 
