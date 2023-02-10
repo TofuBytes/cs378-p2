@@ -83,6 +83,7 @@ div.row.order{
 
 }
 
+
 .num{
   display: inline-flex;
   justify-content: right;
@@ -100,6 +101,11 @@ div.row.order{
   justify-content: center;
   align-items: center;
   font-size: medium;
+}
+
+.qtybtn:active{
+  background-color: black;
+  color: white;
 }
 
 .cart {
@@ -134,6 +140,11 @@ div.row.order{
   border-width: 2px;
 }
 
+.orderbt:active{
+  background-color: rgb(143, 164, 228);
+  color: white;
+}
+
 .clearbt{
   font-size: small;
   border-radius: 20px;
@@ -143,6 +154,11 @@ div.row.order{
   box-shadow: none;
   width:100%;
   border-width: 2px;
+}
+
+.clearbt:active{
+  background-color: rgb(99, 95, 95);
+  color: white;
 }
 
 
